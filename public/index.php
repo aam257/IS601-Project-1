@@ -87,21 +87,14 @@ class csv{
 
 }
 
-class recordFactory{
-    public static function create(Array $fieldNames = null, Array $values = null){
 
-        $record = new record($fieldNames, $values);
-        return $record;
-    }
-
-}
 
 
 class record{
 
-    public function __construct(Array $filedNames = null, $values = null ){
+    public function __construct(Array $fieldNames = null, $values = null ){
 
-        $record = array_combine($fieldNames, $values);
+        $record = array_combine( $fieldNames, $values);
         foreach ($record as $property => $value){
             $this->createProperty($property, $value);
         }
@@ -113,9 +106,18 @@ class record{
         return $array;
     }
 
-    public function createProperty($name = null, $value = null){
+    public function createProperty($name = 'first', $value = 'John'){
         $name = '<th>' . $name . '</th>';
         $value = '<td>'.$value. '</td>';
         $this->{$name} = $value;
     }
+}
+
+class recordFactory{
+    public static function create(Array $fieldNames = null, Array $values = null){
+
+        $record = new record($fieldNames, $values);
+        return $record;
+    }
+
 }
