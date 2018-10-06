@@ -43,5 +43,12 @@ class recordFactory{
 
 class record{
 
+    public function __construct(Arra $fileNames = null, $values = null ){
 
+        $record = array_combine($fieldNames, $values);
+        foreach ($records as $property => $values){
+            $this->createProperty($property, $value);
+        }
+    }
+    
 }
