@@ -5,4 +5,13 @@
  * Date: 10/6/18
  * Time: 10:18 AM
  */
-echo 'test';
+
+main::start();
+
+class main{
+
+    static public function start(){
+        echo 'Hello World';
+
+    }
+}
