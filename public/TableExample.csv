@@ -1,4 +1,4 @@
-First, Last, UCID, Grade,Term, Team
-John, Jcobs,jjobs,A,3,JJ
-William,Walker,wwalker,B,2,WW
-Benjamin,Button,bbutton,A,2,BB
+First, Last, UCID, Grade,Term, Team, PetName
+John, Jcobs,jjobs,A,3,JJ, Jo
+William,Walker,wwalker,B,2,WW, Will
+Benjamin,Button,bbutton,A,2,BB, Ben
