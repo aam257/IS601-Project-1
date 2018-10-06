@@ -27,6 +27,23 @@ class html{
 
 
 class csv{
+    static public function getRecords($filename){
+
+        $file = fopen($filename, "r");
+        $fieldNames = array();
+        $count = 0;
+        while(! feof($file)){
+
+            $record = fetcsv($file);
+            if($count == 0){
+                $fieldNames = $record;
+
+            } else {
+                $records[] = recordFactory::create($fieldNames, $record);
+            }
+            $count++;
+        }
+    }
 
 
 }
@@ -50,5 +67,10 @@ class record{
             $this->createProperty($property, $value);
         }
     }
-    
+
+    public function returnArray(){
+
+        $array = (array) $this;
+        return $array;
+    }
 }
